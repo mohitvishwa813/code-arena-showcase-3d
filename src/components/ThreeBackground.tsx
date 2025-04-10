@@ -2,7 +2,8 @@
 import React, { useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useMemo } from 'react';
-import { Mesh, Vector3, Color, Object3D } from 'three';
+import { Mesh, Vector3, Color } from 'three';
+import { Group } from 'three';
 
 const Particle = ({ position, size, color }) => {
   const mesh = useRef<Mesh>();
@@ -79,7 +80,7 @@ const ParticleField = () => {
 };
 
 const HexagonGroup = () => {
-  const group = useRef<Object3D>();
+  const group = useRef<Group>();
   
   useFrame((state) => {
     if (group.current) {

@@ -117,4 +117,30 @@
   .three-canvas {
     @apply fixed top-0 left-0 w-full h-full -z-10;
   }
+  
+  /* Text shadow for better visibility over ThreeJS background */
+  h1, h2, h3, h4, h5, h6, p, span, a, button, li {
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .text-cyber-foreground {
+    color: #E5DEFF;
+    font-weight: 400;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+  }
+  
+  .text-cyber-foreground\/70 {
+    color: rgba(229, 222, 255, 0.8);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+  }
+  
+  .text-cyber-foreground\/80 {
+    color: rgba(229, 222, 255, 0.85);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+  }
+  
+  .text-cyber-foreground\/90 {
+    color: rgba(229, 222, 255, 0.9);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+  }
 }
