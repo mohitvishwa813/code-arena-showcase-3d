@@ -2,7 +2,7 @@
 import React, { useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useMemo } from 'react';
-import { Mesh, Vector3, Color } from 'three';
+import { Mesh, Vector3, Color, Object3D } from 'three';
 
 const Particle = ({ position, size, color }) => {
   const mesh = useRef<Mesh>();
@@ -79,7 +79,7 @@ const ParticleField = () => {
 };
 
 const HexagonGroup = () => {
-  const group = useRef();
+  const group = useRef<Object3D>();
   
   useFrame((state) => {
     if (group.current) {
@@ -90,11 +90,11 @@ const HexagonGroup = () => {
   return (
     <group ref={group} position={[0, 0, -10]}>
       <mesh position={[0, 0, 0]}>
-        <torusGeometry args={[5, 0.2, 6, 6]} />
+        <torusGeometry args={[5, 0.2, 16, 6]} />
         <meshStandardMaterial color="#8B5CF6" emissive="#8B5CF6" emissiveIntensity={0.5} />
       </mesh>
       <mesh position={[0, 0, 0]} rotation={[0, 0, Math.PI / 6]}>
-        <torusGeometry args={[6, 0.1, 6, 6]} />
+        <torusGeometry args={[6, 0.1, 16, 6]} />
         <meshStandardMaterial color="#0EA5E9" emissive="#0EA5E9" emissiveIntensity={0.5} />
       </mesh>
     </group>

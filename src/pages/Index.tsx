@@ -1,11 +1,10 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import MainLayout from '@/components/layout/MainLayout';
 import ChallengeCard, { ChallengeCardProps } from '@/components/ChallengeCard';
 import { Button } from '@/components/ui/button';
-import { Medal, ArrowRight, Code, Zap, Users, CheckCircle } from 'lucide-react';
+import { Medal, ArrowRight, Code, Zap, Users, CheckCircle, Trophy } from 'lucide-react';
 
 // Sample challenge data
 const FEATURED_CHALLENGES: ChallengeCardProps[] = [
