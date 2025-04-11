@@ -60,7 +60,7 @@ const ChallengeCard: React.FC<ChallengeCardProps> = ({
           </span>
         </div>
         
-        <h3 className="text-xl font-semibold mb-2 group-hover:text-cyber-primary transition-colors">{title}</h3>
+        <h3 className="text-xl font-semibold mb-2 group-hover:text-cyber-primary transition-colors text-cyber-primary">{title}</h3>
         <p className="text-sm text-cyber-foreground/70 mb-4">{type}</p>
         
         <div className="space-y-3 mb-6 flex-grow">
@@ -82,7 +82,7 @@ const ChallengeCard: React.FC<ChallengeCardProps> = ({
         
         <div className="mt-auto">
           <div className="flex items-center justify-between mb-3">
-            <span className="text-sm font-medium">Entry Fee</span>
+            <span className="text-sm font-medium text-cyber-secondary">Entry Fee</span>
             <span className="font-medium text-cyber-accent">₹{entryFee}</span>
           </div>
           
